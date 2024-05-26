@@ -1,0 +1,96 @@
+/**
+ * Basic typography style for copy text
+ */
+html body {
+  color: $text-color;
+  font: normal 125% / 1.4 $sans-serif;
+		line-height: 21px;
+	font-weight: 300;
+}
+
+body a {
+  color: $black;
+	font-weight: 500;
+	&:hover {
+		color: $red;
+	}
+}
+
+html body p {
+	&:first-child {
+		font-weight: 400;
+	}
+}
+
+body strong, body b {
+	font-weight: 700;	
+}
+
+body,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+.rev-featured-post {
+	font-family: $sans-serif;
+}
+
+body h1 {
+	font-size: $fontSize-huge;
+	color: $darkBlue;
+	border-bottom: 5px solid $darkBlue;
+	padding-bottom: 16px;
+	padding-top: 16px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: $fontWeight-bold;
+}
+
+.professional_issues h1 {
+	color: $darkBlue;
+	border-color: $darkBlue;
+}
+
+.specialites h1 {
+	color: $green;
+	border-color: $green;
+}
+
+.workplace_issues h1 {
+	color: $purple;
+	border-color: $purple;
+}
+
+.social_justice_action h1 {
+	color: $orange;
+	border-color: $orange;
+}
+
+.life h1 {
+	color: $pink;
+	border-color: $pink;
+}
+
+.editorial h1 {
+	color: $lime;
+	border-color: $lime;
+}
+
+.newsList-title-wrapper h2 {
+	font-family: sans-serif;
+	font-size: $fontSize-huge;
+	font-weight: $fontWeight-bold;
+	text-transform: uppercase;
+	line-height: 1.5;
+}
+
+h4.widget-title {
+	font-size: 28px;
+	border-top: 5px solid $black;
+	border-bottom: 1px solid $black;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+}

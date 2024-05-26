@@ -1,0 +1,140 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+$pageWidth: 1200px;
+$header-height: 102px;
+$secondary-menu-height: 31px;
+$sticky-padding: $header-height + $secondary-menu-height + 48px;
+$secondary-menu-position: $header-height + $secondary-menu-height; 
+$content-margin-top: 31px;
+
+//Brand colours
+$red: #E30613;
+$yellow: #F5AA00;
+$darkBlue: #0052A5;
+$blue: #00A7FF;
+$green: #009B0C;
+$purple: #79009D;
+$orange: #FF8900;
+$teal: #18B8C4;
+$pink: #FF0058;
+$lime: #8BBE00;
+$black: #2d2d2d;
+$white: #fff;
+$lightGrey: #A6ADB4;
+$lightestGrey: #ebebeb;
+
+//Border colours
+$border-red: #F5BEC1;
+$border-yellow: #E4F2BB;
+$border-darkBlue: #B0CCE8;
+$border-blue: #00A7FF;
+$border-green: #C6EDC9;
+$border-purple: #DBB9E5;
+$border-orange: #E5C299;
+$border-teal: #ACE1E5;
+$border-pink: #DBB9E5;
+$border-lime: #C9CEB1;
+$border-black: #E3E3E3;
+
+//Dark brand colours 
+$red-dark: #950009;
+$darkBlue-dark: #013A74;
+$green-dark: #027C0C;
+$purple-dark: #500167;
+$orange-dark: #D87503;
+$pink-dark: #E00450;
+$lime-dark: #7DAA02;
+$blue-dark: #007aba;
+
+//Light brand colours 
+$red-light: rgba(245,190,193,0.2);
+$darkBlue-light: #e7f0fa;
+$green-light: #f0f8f1;
+$purple-light: #fbf2fd;
+$orange-light: #fdf0e0;
+$pink-light: #fff2f6;
+$lime-light: #f6faea;
+$blue-light: c1d9e6;
+	
+//secondary menu color
+$menu-red: #950009;
+
+$sans-serif: aktiv-grotesk, sans-serif;
+$fontawesome: fontawesome;
+$fontWeight-light: 300;
+$fontWeight-regular: 400;
+$fontWeight-medium: 500;
+$fontWeight-bold: 700;
+
+$fontSize-tiny: 8px;
+$fontSize-extraSmall: 12px;
+$fontSize-small: 14px;
+$fontSize-medium: 16px;
+$fontSize-big: 21px;
+$fontSize-huge: 28px;
+$fontSize-massive: 48px;
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

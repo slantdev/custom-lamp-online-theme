@@ -1,0 +1,263 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin header-color($text-color) {
+ #wrapper header .fusion-header {
+	 background-color: $text-color;		
+	}	
+	#secondaryHeader {
+		background-color: $text-color;
+	}	
+}
+
+@mixin flyout-menu-color($color) {
+	.main-menu-wrapper {
+		background-color: $color;
+	}	
+}
+
+@mixin menu-color($text-color) {
+  li a:hover {
+			color: $text-color;
+	}	
+	
+	li:nth-child(2)>a {
+		background-color: $text-color;
+			&:hover {
+				background-color: $white;
+				color: $text-color;
+			}
+	}	
+	
+	.sub-menu>li:nth-child(2)>a {
+		background-color: transparent;
+	}
+	
+	.sub-menu>li>a {
+		&:hover {
+				background-color: $white;
+				color: $text-color;
+			}
+	}
+}
+
+@mixin category-color($text-color, $dark-color, $light-color, $border-color) {
+	a:hover {
+		color: $text-color !important;	
+	}
+	
+	header {
+		background-color: $text-color;	
+		
+		.header-social-media {
+			a {
+				&:hover {
+					color: $dark-color !important;
+				}
+			}
+		}
+		
+		.tagline-wrapper {
+			background-color: $dark-color;
+		}	
+		
+		.main-menu-wrapper {
+			background-color: $dark-color;
+		}
+		.searchform-box {
+			@media(max-width:576px) {
+				background-color: $dark-color;
+			}
+		}
+		
+		.search-form-input {
+			border-right: 2px solid $text-color;
+		}
+		
+		.search-form-submit {
+			color: $text-color;
+			&:hover {
+				background-color: $dark-color;
+			}
+			@media (max-width: 576px) {
+				background-color: $text-color;
+				color: $white;
+			}
+		}
+	}
+	
+	.bg-lightThemeColor {
+		background-color: $light-color;
+	}
+	
+	.newsList-title-wrapper {
+		//border-top: 5px solid $text-color;
+		border-bottom: 1px solid $border-color;
+		&::before {
+			background-color: $text-color;
+		}
+		
+		&::after {
+			background-color: $text-color;
+		}
+		
+		h2, h2 a {
+			color: $text-color;
+		}
+		.seeMore-wrapper a:hover {
+			color: $text-color;
+		}
+	}
+	
+	h1 {
+		color: $text-color;
+		border-color: $text-color;
+	}
+	
+	.line-break {
+		border-color: $border-color;	
+	}
+	
+	.newsList {
+		article {
+			border-color: $border-color;
+			.category {
+				color: $text-color;
+			}
+			
+			h3.title a:hover {
+				color: $text-color;
+			}
+		}
+
+		.newsList-column article {
+			border-color: $border-color;
+		}
+	}
+	
+	.post-pagination-wrapper {
+		.page-numbers {
+			color: $text-color;
+			&.current, &:hover {
+				color: $white !important;
+				background-color: $text-color !important;
+			}
+		}
+		.prev:hover, .next:hover {
+			color: $text-color !important;
+			background-color: transparent !important;
+		}
+	}
+	.post-pagination-wrapper .post-pagination-content {
+		//background-color: $border-color;
+		border-color: $border-color;
+	}
+	.post-pagination-wrapper .post-pagination-content .page-numbers.current, .post-pagination-wrapper .post-pagination-content .page-numbers:hover {
+		color: $text-color;
+	}
+	
+	
+	.border-right, .border-bottom {
+		border-color: $border-color !important;
+	}
+	
+	#single-post-content {
+		h2.category {
+			color: $text-color;
+			border-bottom-color: $text-color;
+			&::after {
+				background-color: $light-color;
+			}
+		}
+		
+		.post-meta {
+			border-color: $border-color;	
+		}
+		
+		.breadcrumbs a {
+			color: $text-color;
+		}
+		
+		.post-related {
+			border-bottom-color: $border-color;	
+			h3 {
+				font-size: 24px;
+				font-weight: normal;
+			}
+		}
+		
+		.social-box, .comment-list .comment, .comment-list .comment header {
+			border-color: $text-color;	
+		}
+		
+		.comment-reply-link  {
+			background-color: $text-color;	
+		}
+		
+		.post-related h2,
+		.comment-reply-title,
+		.entry-comments h3,
+		{
+			border-top-color: $text-color;
+			border-bottom-color: $border-color;
+			color: $text-color;
+		}
+		
+		//form styling
+		.comment-respond {
+			textarea:focus, input:focus {
+				outline-color: $border-color;
+			}
+			
+			.form-submit .submit {
+				background-color: $text-color;
+				&:hover {
+					background-color: $dark-color;
+				}
+			}
+		}
+	}
+	
+	&.subcategory_page {
+		.breadcrumbs a {
+			color: $text-color;	
+		}
+	}
+}
+
+@mixin seeMore-arrow($image-filename) {
+	.seeMore-wrapper a::after {
+		background-image:url($image-filename);
+	}
+}

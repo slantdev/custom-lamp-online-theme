@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+// 2. Vendors
+@import "vendors/wp_quiz";
+@import "vendors/normalize";
+
+// 3. Base stuff
+@import "base/base";
+@import "base/fonts";
+@import "base/typography";
+@import "base/helpers";
+
+// 4. Layout-related sections
+@import "layout/header";
+@import "layout/footer";
+@import "layout/main";
+@import "layout/sidebar";
+
+// 5. Components
+@import "components/button";
+@import "components/newsList";
+@import "components/newsletter-modal";
+@import "components/listicles";
+@import "components/accordion";
+
+// 6. Page-specific styles
+@import "pages/home";
+@import "pages/single-post";
+@import "pages/single-page";
+@import "pages/single-jobs";
+@import "pages/single-our-stories";
+@import "pages/archive-our-stories";
+@import "pages/guest-posting-form";
+
+// 7. Themes
+@import "themes/default";

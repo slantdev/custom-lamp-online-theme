@@ -1,0 +1,21 @@
+.guest-posting-form {
+  input {
+    accent-color: $red;
+  }
+  .acf-form-submit {
+    margin: 0 15px;
+    input {
+      background-color: $red;
+      font-family: aktiv-grotesk, sans-serif;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: 0.2s background-color;
+      font-size: 14px;
+      &:hover {
+        background-color: $red-dark;
+      }
+    }
+  }
+}

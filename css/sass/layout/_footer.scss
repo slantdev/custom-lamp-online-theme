@@ -1,0 +1,77 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+footer {
+	background-color: $lightGrey;
+	
+	.widget_media_image {
+		margin-bottom: 32px;
+	}
+	
+	.textwidget {
+		font-size: 14px;
+		color: $black;
+		font-family: $sans-serif;
+		a {
+			color: $white;
+		}	
+		h3 {
+			color: $black;
+			font-family: $sans-serif;
+			font-size: 21px;
+			font-weight: bold;
+		}	
+	}
+		
+	h4.widget-title {
+		border: none;
+		color: $black;
+		font-size: 14px;
+		font-family: $sans-serif;
+		    margin-bottom: 16px;
+    font-weight: 800;
+		text-transform: uppercase;
+	}	
+	
+	.menu {
+		list-style: none;
+		padding: 0;
+		a {
+			font-size: 14px;
+			color: $white;
+		}	
+	}
+
+	.footer-copyright-area {
+		background-color: $black;
+		color: $white;
+		font-size: 12px;
+	}
+
+	.footer-social-media {
+		display: flex;
+		 justify-content: space-between;
+		padding-bottom: 16px;
+		margin-bottom: 32px;
+		border-bottom: 1px solid $white;
+		a {
+			font-size: 21px;
+		}	
+	}
+	
+	.footer-widget:nth-child(1) {
+	  //padding-right: 32px;	
+	}
+	
+	.footer-widget:nth-child(2) {
+		@media (min-width: 576px) {
+			border-right: 1px solid $white;
+		}
+		//padding-right: 32px;
+	}	
+	
+	.footer-widget:nth-child(3) {
+		//padding-left: 32px;
+	}	
+	
+}

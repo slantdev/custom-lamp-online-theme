@@ -1,0 +1,105 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main body of the site.
+// -----------------------------------------------------------------------------
+
+.main-content {
+	height: 100vh;
+}
+
+.bg-grey {
+	background-color: $lightestGrey;
+}
+
+.screen-reader-text{
+	display: none;
+}
+
+.wpp-list {
+	padding: 0;
+}
+
+#recentcomments {
+	list-style: none;
+	padding: 0;
+}
+
+//TODO: Remove this
+.category_page .site-container {
+	//overflow-x: hidden;
+}
+
+.subcategory_page {
+	.breadcrumbs {
+		margin-bottom: 24px;
+		a {
+			color: $red;
+			font-size: 16px;
+			&:last-child {
+				color: $black !important;
+			}
+		}
+	}
+}
+
+//TODO: Move to adsanity scss
+.ad-1x1, .ad-1x2, .ad-1x3, .ad-1x4, .ad-2x1, .ad-3x1, .ad-4x1, .ad-6x1, .ad-8x1, .ad-10x1, .ad-88x31, .ad-120x60, .ad-120x90, .ad-120x240, .ad-120x600, .ad-125x125, .ad-160x600, .ad-180x150, .ad-200x90, .ad-200x200, .ad-234x60, .ad-240x400, .ad-250x250, .ad-300x100, .ad-300x250, .ad-300x600, .ad-336x280, .ad-468x15, .ad-468x60, .ad-720x300, .ad-728x90 {
+	margin: auto;
+}
+
+.adsanity-970x250 {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+//TODO: Move to search page scss
+.search-results-page {
+	.tagline-wrapper {
+		display: none;
+	}
+}
+.searchResults {
+	.post-type-heading {
+		text-transform: uppercase;
+	}
+	article {
+		-ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+		position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+		border-left: 2px solid $border-red;
+    margin-left: 15px;
+    margin-bottom: 16px;
+		header {
+			background-color: $white;
+			color: $red;
+			h2 a {
+				font-size: 24px;
+				color: $red;
+			}
+		}
+		p {
+			font-size: 16px;
+		}
+		.more-link {
+			display: block;
+			margin-top: 16px;
+			background-color: $red;
+			width: fit-content;
+			padding: 8px 16px;
+			color: $white;
+			border-radius: 4px;
+			border: 2px solid $red;
+			transition: .4s color, .4s background-color;
+			&:hover {
+				background-color: $white;
+				color: $red;
+				text-decoration: none;
+			}
+		}
+	}
+}

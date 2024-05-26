@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+/*h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}*/
+
+//hide accessability elements
+.genesis-skip-link,
+.genesis-sidebar-title.screen-reader-text{
+	display: none;	
+}
+
+@media (min-width: 576px) {
+	.container {
+			max-width: 540px !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+			max-width: 720px !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+			max-width: 960px !important;
+	}
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1240px !important;
+    }
+}
+
+.genesis-responsive-menu,
+.nav-secondary,
+#genesis-mobile-nav-primary {
+	display: none;
+}

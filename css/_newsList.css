@@ -1,0 +1,79 @@
+/*
+Error: Undefined variable: "$border-black".
+        on line 18 of C:\xampp\htdocs\_lamponline\wp-content\themes\custom-lamp-online-theme\css\sass\components\_newsList.scss
+
+13: 		flex-direction: column;
+14: 		width: calc(100% / 3);
+15: 		margin-top: 24px;
+16: 		padding-right: 16px;
+17: 		padding-left: 16px;
+18: 		border-right: 1px solid $border-black;
+19: 		margin-bottom: 24px;
+20: 		padding-bottom: 16px;
+21: 	
+22: 		&:nth-child(3n + 1) {
+23: 			margin-right: 0;
+
+Backtrace:
+C:\xampp\htdocs\_lamponline\wp-content\themes\custom-lamp-online-theme\css\sass\components\_newsList.scss:18
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/list_literal.rb:75:in `map'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/list_literal.rb:75:in `_perform'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:20:in `render'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/engine.rb:290:in `render'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:400:in `run'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:63:in `process_result'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+H:/adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'
+H:/adobe/Adobe Dreamweaver 2020/ruby/bin/sass:23:in `load'
+H:/adobe/Adobe Dreamweaver 2020/ruby/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$border-black\".\A         on line 18 of C:\xampp\htdocs\_lamponline\wp-content\themes\custom-lamp-online-theme\css\sass\components\_newsList.scss\A \A 13: 		flex-direction: column;\A 14: 		width: calc(100% / 3);\A 15: 		margin-top: 24px;\A 16: 		padding-right: 16px;\A 17: 		padding-left: 16px;\A 18: 		border-right: 1px solid $border-black;\A 19: 		margin-bottom: 24px;\A 20: 		padding-bottom: 16px;\A 21: 	\A 22: 		&:nth-child(3n + 1) {\A 23: 			margin-right: 0;"; }

@@ -1,0 +1,27 @@
+.archive-our-stories {
+  .newsList {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    ul,
+    li,
+    p {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .btn {
+    background-color: $orange;
+    color: white;
+    &:hover,
+    &:focus {
+      background-color: $orange-dark;
+      color: white !important;
+      text-decoration: none;
+    }
+  }
+  @media screen and (min-width: 480px) {
+    .btn {
+      display: none;
+    }
+  }
+}

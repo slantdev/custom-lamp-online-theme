@@ -1,0 +1,48 @@
+.wq-quiz-wrapper {
+    margin-top: 24px;
+
+    .wq_quizProgressBar>span {
+        background-color: #E30613;
+    }
+
+    .wq-quiz-trivia .wq_questionTextCtr {
+        background: none;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .wq_retakeQuizBtn, .wq-force-login button, .wq_singleQuestionWrapper .wq_continue button, .wq_triviaQuizTimerInfoCtr button, .wq-pay-locker button, .wq_quizEmailCtr form button, .wq-subscribe-locker button {
+        background-color: #E30613;
+        transition: .4s background-color;
+        &:hover {
+            background-color: #950009;
+        }
+    }
+
+    .wq_quizCtr.listquiz_quiz .wq-question-number {
+        background-color: #E30613;
+    }
+
+    .wq_quizCtr.listquiz_quiz .card {
+        border: none;
+    }
+
+    .wq_quizCtr.listquiz_quiz .desc {
+        text-shadow: none;
+        font-size: 16px;
+        text-align: left;
+        justify-content: left;
+        color: #000000;
+        padding: 0;
+    }
+
+    .wq_quizCtr.listquiz_quiz .wq_singleQuestionWrapper {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        padding: 2rem !important;
+    }
+
+    //results
+    .wq-results .wq_resultScoreCtr {
+        margin-bottom: 16px;
+    }
+}

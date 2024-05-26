@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the newsletter signup modal component.
+// -----------------------------------------------------------------------------
+
+.modal {
+	.modal-header {
+		background-color: $red;
+		color: $white;
+	}
+	
+	.logo-box {
+		width: 100%;
+		text-align: center;
+		
+		img {
+			height: 60px;
+		}
+	}
+}

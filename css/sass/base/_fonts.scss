@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@import url("https://use.typekit.net/hgl0git.css");
+
+html body {
+	font-size: $fontSize-medium;
+	font-family: $sans-serif;
+}
+
+#wrapper #main {
+	h1, h2, h3, h4, h5, h6,
+	.fusion-post-content > .blog-shortcode-post-title{
+		font-family: $sans-serif;
+	}
+
+	h2 {
+		font-size: $fontSize-huge;
+	}
+}
