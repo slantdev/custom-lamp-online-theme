@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Genesis Sample.
  *
@@ -12,7 +13,7 @@
  * @link    https://www.studiopress.com/
  */
 
-add_filter( 'body_class', 'genesis_sample_landing_body_class' );
+add_filter('body_class', 'genesis_sample_landing_body_class');
 /**
  * Adds landing page body class.
  *
@@ -21,27 +22,27 @@ add_filter( 'body_class', 'genesis_sample_landing_body_class' );
  * @param array $classes Original body classes.
  * @return array Modified body classes.
  */
-function genesis_sample_landing_body_class( $classes ) {
-	
+function genesis_sample_landing_body_class($classes)
+{
+
 	//$classes[] = 'custom-single theme_color-darkBlue' . get_single_page_color();
 	$classes[] = 'search-results-page';
 	return $classes;
-
 }
 
 // Removes Skip Links.
-remove_action( 'genesis_before_header', 'genesis_skip_links', 5 );
+remove_action('genesis_before_header', 'genesis_skip_links', 5);
 
-add_action( 'wp_enqueue_scripts', 'genesis_sample_dequeue_skip_links' );
+add_action('wp_enqueue_scripts', 'genesis_sample_dequeue_skip_links');
 /**
  * Dequeues Skip Links Script.
  *
  * @since 1.0.0
  */
-function genesis_sample_dequeue_skip_links() {
+function genesis_sample_dequeue_skip_links()
+{
 
-	wp_dequeue_script( 'skip-links' );
-
+	wp_dequeue_script('skip-links');
 }
 
 
@@ -51,16 +52,16 @@ function genesis_sample_dequeue_skip_links() {
 //remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
 
 // Removes navigation.
-remove_theme_support( 'genesis-menus' );
+remove_theme_support('genesis-menus');
 
 // Removes site footer elements.
 //remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
-remove_action( 'genesis_footer', 'genesis_do_footer' );
+remove_action('genesis_footer', 'genesis_do_footer');
 //remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
 
 //remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 //remove_action( 'genesis_after_entry', 'genesis_get_comments_template' );
-	
+
 //remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 //remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 //add_action( 'genesis_entry_content', 'slant_content' );
@@ -191,14 +192,15 @@ function slant_after_content() { ?>
 
 <?php }*/
 
-function get_single_page_color() {
-	
+function get_single_page_color()
+{
+
 	$category = get_the_category();
 	$category_name = $category[0]->name;
 	$parent = $category[0]->parent;
 	$category_parent_id = get_category($parent);
 	$category_parent_name = $category_parent_id->name;
-	
+
 	$className = convert_category_name_to_class($category_parent_name);
 
 	return $category_parent_id->slug;
@@ -251,96 +253,96 @@ function get_single_page_color() {
 genesis();
 */
 
-remove_action( 'genesis_loop', 'genesis_do_loop' );
-add_action( 'genesis_loop', 'sk_do_search_loop' );
+remove_action('genesis_loop', 'genesis_do_loop');
+add_action('genesis_loop', 'sk_do_search_loop');
 /**
  * Outputs a custom loop.
  *
  * @global mixed $paged current page number if paginated.
  * @return void
  */
-function sk_do_search_loop() {
+function sk_do_search_loop()
+{
 	// create an array variable with specific post types in your desired order.
 	//$post_types = array( 'recipe', 'page', 'post' );
-	$post_types = array( 'post' );
+	$post_types = array('post');
 	echo '<div class="search-content">';
-	foreach ( $post_types as $post_type ) {
+	foreach ($post_types as $post_type) {
 		// get the search term entered by user.
-		$s = isset( $_GET["s"] ) ? $_GET["s"] : "";
-		
+		$s = isset($_GET["s"]) ? $_GET["s"] : "";
+
 		//search variables
 		//$ourCurrentPage = get_query_var('paged');
 		//Protect against arbitrary paged values
-		$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
-		
+		$paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+
 		$display_count = 10;
-		
+
 		// accepts any wp_query args.
 		$args = (array(
 			's' => $s,
 			'post_type' => $post_type,
-			'posts_per_page' => $ourCurrentPage,
+			//'posts_per_page' => $ourCurrentPage,
 			'order' => 'DESC',
 			'orderby' => 'date',
 			'paged' => $paged,
 		));
-		
-		$query = new WP_Query( $args );
-		if ( $query->have_posts() ) {
+
+		$query = new WP_Query($args);
+		if ($query->have_posts()) {
 			echo '<div class = "searchResults container py-5">';
-			echo '<div class="post-type '. $post_type .' row">
+			echo '<div class="post-type ' . $post_type . ' row">
 							<div class="post-type-heading col-12">
 								<div class = "newsList-container pb-0">
 									<div class="newsList-title-wrapper">
-										<h2>Search Results for <strong>' . $s .'</strong></h2>
+										<h2>Search Results for <strong>' . $s . '</strong></h2>
 									</div>
 								</div>
 							</div>
 						</div>';
-			
-				//display search results
-				echo '<div class = "row">';
-			
-				// remove post info.
-				remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-				// remove post image (from theme settings).
-				remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
-				// remove entry content.
-				// remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
-				// remove post content nav.
-				remove_action( 'genesis_entry_content', 'genesis_do_post_content_nav', 12 );
-				remove_action( 'genesis_entry_content', 'genesis_do_post_permalink', 14 );
-				// force content limit.
-				add_filter( 'genesis_pre_get_option_content_archive_limit', 'sk_content_limit' );
-				// modify the Content Limit read more link.
-				add_filter( 'get_the_content_more_link', 'sp_read_more_link' );
-				// force excerpts.
-				// add_filter( 'genesis_pre_get_option_content_archive', 'sk_show_excerpts' );
-				// modify the Excerpt read more link.
-				add_filter( 'excerpt_more', 'new_excerpt_more' );
-				// modify the length of post excerpts.
-				add_filter( 'excerpt_length', 'sp_excerpt_length' );
-				// remove entry footer.
-				remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
-				remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 );
-				remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
-				// remove archive pagination.
-				remove_action( 'genesis_after_endwhile', 'genesis_posts_nav' );
-				// custom genesis loop with the above query parameters and hooks.
-				genesis_custom_loop( $args );
-			
-				if($query->max_num_pages > 1)
-					echo get_paginate_links($query->max_num_pages);
+
+			//display search results
+			echo '<div class = "row">';
+
+			// remove post info.
+			remove_action('genesis_entry_header', 'genesis_post_info', 12);
+			// remove post image (from theme settings).
+			remove_action('genesis_entry_content', 'genesis_do_post_image', 8);
+			// remove entry content.
+			// remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
+			// remove post content nav.
+			remove_action('genesis_entry_content', 'genesis_do_post_content_nav', 12);
+			remove_action('genesis_entry_content', 'genesis_do_post_permalink', 14);
+			// force content limit.
+			add_filter('genesis_pre_get_option_content_archive_limit', 'sk_content_limit');
+			// modify the Content Limit read more link.
+			add_filter('get_the_content_more_link', 'sp_read_more_link');
+			// force excerpts.
+			// add_filter( 'genesis_pre_get_option_content_archive', 'sk_show_excerpts' );
+			// modify the Excerpt read more link.
+			add_filter('excerpt_more', 'new_excerpt_more');
+			// modify the length of post excerpts.
+			add_filter('excerpt_length', 'sp_excerpt_length');
+			// remove entry footer.
+			remove_action('genesis_entry_footer', 'genesis_entry_footer_markup_open', 5);
+			remove_action('genesis_entry_footer', 'genesis_entry_footer_markup_close', 15);
+			remove_action('genesis_entry_footer', 'genesis_post_meta');
+			// remove archive pagination.
+			remove_action('genesis_after_endwhile', 'genesis_posts_nav');
+			// custom genesis loop with the above query parameters and hooks.
+			genesis_custom_loop($args);
+
+			if ($query->max_num_pages > 1)
+				echo get_paginate_links($query->max_num_pages);
 
 
-			?>
+?>
 			<?php
 			echo '</div>';
 			echo '</div>';
-		}
-		else {
+		} else {
 			echo '<div class = "searchResults container py-5">';
-			echo '<div class="post-type '. $post_type .' row">
+			echo '<div class="post-type ' . $post_type . ' row">
 							<div class="post-type-heading col-12">
 								<div class = "newsList-container pb-0">
 									<div class="newsList-title-wrapper">
@@ -349,7 +351,7 @@ function sk_do_search_loop() {
 								</div>
 							</div>
 						</div>';
-	
+
 			echo '<div class = "row">
 							<div class = "col-12">
 								<p>Try searching again for something else</p>
@@ -360,19 +362,24 @@ function sk_do_search_loop() {
 	echo '</div>'; // .search-content
 	wp_reset_postdata();
 }
-function sk_content_limit() {
+function sk_content_limit()
+{
 	return '150'; // number of characters.
 }
-function sp_read_more_link() {
+function sp_read_more_link()
+{
 	return '... <a class="more-link" href="' . get_permalink() . '">Continue Reading</a>';
 }
-function sk_show_excerpts() {
+function sk_show_excerpts()
+{
 	return 'excerpts';
 }
-function new_excerpt_more( $more ) {
-    return '... <a class="more-link" href="' . get_permalink() . '">Continue Reading</a>';
+function new_excerpt_more($more)
+{
+	return '... <a class="more-link" href="' . get_permalink() . '">Continue Reading</a>';
 }
-function sp_excerpt_length( $length ) {
+function sp_excerpt_length($length)
+{
 	return 20; // pull first 20 words.
 }
 
