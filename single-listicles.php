@@ -64,7 +64,7 @@ remove_action('genesis_after_entry', 'genesis_get_comments_template');
 remove_action('genesis_entry_header', 'genesis_do_post_title');
 remove_action('genesis_entry_content', 'genesis_do_post_content');
 add_action('genesis_entry_content', 'slant_content');
-add_action('genesis_entry_content', 'genesis_get_comments_template');
+//add_action('genesis_entry_content', 'genesis_get_comments_template');
 add_action('genesis_entry_content', 'slant_after_content');
 
 function slant_content()
@@ -164,13 +164,12 @@ function slant_content()
 				</div>
 
 				<!-- related posts -->
-				<div class="post-related my-4">
+				<!-- <div class = "post-related my-4">
 					<h2>Related Posts</h2>
-					<div class="related-posts-wrapper row">
-						<?php wpt_related_posts_cat(); ?>
-					</div>
-
-				</div>
+					<div class = "related-posts-wrapper row">
+					<?php /* wpt_related_posts_cat(); */ ?>
+					</div>					
+				</div> -->
 
 				<!-- middle advertisement section -->
 				<section class="container-fluid">
@@ -181,9 +180,9 @@ function slant_content()
 					</div>
 				</section>
 
-				<section class="container">
-					<?php echo do_shortcode('[social]'); ?>
-				</section>
+				<!-- <section class="container">
+				<?php /* echo do_shortcode('[social]'); */ ?>
+				</section> -->
 				<?php }
 
 			function wpt_related_posts_cat()
